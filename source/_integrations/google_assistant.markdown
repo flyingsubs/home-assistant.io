@@ -60,12 +60,14 @@ If you've added Home Assistant to your phone's home screen, you have to first re
 </div>
 
 1. If you want to allow other household users to control the devices:
-    1. Go to the settings for the project you created in the [Actions on Google console](https://console.actions.google.com/).
-    2. Click `Test -> Simulator`, then click `Share` icon in the right top corner. Follow the on-screen instruction:
-        1. Add team members: Got to `Settings -> Permission`, click `Add`, type the new user's e-mail address and choose `Project -> Viewer` role.
-        2. Copy and share the link with the new user.
-        3. When the new user opens the link with their own Google account, it will enable your draft test app under their account.
-    3. Have the new user go to their `Google Assistant` app to add `[test] your app name` to their account.
+    a. cick the 3 dots icon in the upper right corner of the console.
+    b. Click Manage user access. This redirects you to the Google Cloud Platform IAM permissions page.
+    c. Click ADD at the top of the page. 
+    d. Enter the email address of the user you want to add.
+    e. Click Select a role and choose Project < Viewer. 
+    f. Click SAVE.
+    The user is now able to see the Action in their console.
+    [Share an Action](https://developers.google.com/assistant/smarthome/develop/testing-submitting#share-action)
 2. If you want to support actively reporting of state to Google's server (config option `report_state`) and support `google_assistant.request_sync`, you need to generate a service account.
     1. In the GCP Console, go to the [Create Service account key](https://console.cloud.google.com/apis/credentials/serviceaccountkey) page.
     2. From the Service account list, select New service account.
